@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo_card {
+  height: 600px;
+  min-height: fit-content;
+  max-width: 530px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+
+  background-color: whitesmoke;
+  scroll-behavior: smooth;
+}
+
+.todo_card h1 {
+  text-align: center;
+  font-size: 3vw;
+}
+.todo_card h1 img {
+  width: 50px;
+}
+.row {
+  height: 50px;
+  width: 80%;
+  margin: auto;
+  border-radius: 40px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(222, 221, 221);
+}
+.row input {
+  background-color: transparent;
+  outline: none;
+  height: 100%;
+  border: none;
+  text-indent: 20px;
+  font-size: 20px;
+}
+
+.row button {
+  padding: 5px 35px;
+  background-color: rgb(238, 3, 250);
+  border-radius: 40px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.todo_card ul {
+  padding-bottom: 20px;
+  overflow-x: hidden;
+  height: 450px;
+  padding-top: 10px;
+  width: 90%;
+  margin: auto;
+}
+.todo_card ul::-webkit-scrollbar {
+  display: none;
+}
+.todo_card ul li {
+  background-color: transparent;
+  margin: 10px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+  padding-left: 45px;
+  user-select: none;
+  color: rgb(19, 16, 16);
+  position: relative;cursor: pointer;
+}
+ul li::before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  background-image: url(/Images/radio.png);
+  border-radius: 50%;
+  background-size: cover;
+  top: 8px;
+  left: 8px;
+  background-position: center;
+}
+.checked {
+  text-decoration: line-through;
+  color: rgb(88, 92, 92);
+}
+.checked::before{
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-size: cover;
+  top: 9px;
+  left: 9px;
+  background-position: center;
+  background-image: url(/Images/check.png);
+}
+.todo_card ul li span {
+  position: absolute;
+  right: 4px;
+  top: 3px;text-align: center;
+  padding: 5px 10px;
+  border-radius: 50%;
+  
+}
+.todo_card ul li span:hover {
+  background-color: rgb(224, 225, 225);
+}
